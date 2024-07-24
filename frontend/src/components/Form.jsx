@@ -13,8 +13,25 @@ function Form({route, method}) {
 
     const name = method === "login" ? "Login" : "Register"
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = async(e) => {
+        setLoading(true);
+        e.preventDefault();
+        
+        try { 
+            const res = await api.post(route, {username, password})
+            if (method === "login"){ //if the method is login 
+                localStorage.setItem(ACCESS_TOKEN, res.data.access); // Store the access token in local storage
+                localStorage.setItem(REFRESH_TOKEN, res.data.refresh); // Store the refresh token in local storage
+                navigate("/") // Navigate to the home page
+            }else{ // If the method is not "login" ( register)
+                navigate("/login") // Navigate to the login page
+            }
+        }
+        catch(error){
+            alert(error)
+        }finally {
+            setLoading(false)
+        }
     }
 
     return <form onSubmit={handleSubmit} className="form-container">
