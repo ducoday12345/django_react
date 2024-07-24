@@ -36,7 +36,7 @@ function Form({route, method}) {
     }
 
     return <form onSubmit={handleSubmit} className="form-container">
-        <h1>{method === "Login" ? "Login" : "Register"}</h1>
+        <h1>{name}</h1>
         <input
             className="form-input"
             type="text"
