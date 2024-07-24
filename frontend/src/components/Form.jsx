@@ -2,6 +2,7 @@ import {useState} from "react"
 import api from "../api"
 import { useNavigate } from "react-router-dom"
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants"
+import "../styles/Form.css"
 
 //route: path to submit form
 //method: register or log in
@@ -55,3 +56,5 @@ function Form({route, method}) {
         </button>
     </form>
 }
+
+export default Form
