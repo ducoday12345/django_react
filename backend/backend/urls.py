@@ -3,6 +3,7 @@ from django.urls import path, include
 from api.views import CreateUserView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+#any api route that is not inside urlpatterns will be forwarded to api/urls.py file
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/register/', CreateUserView.as_view(), name = 'register'),
