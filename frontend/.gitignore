@@ -30,4 +30,8 @@ dist-ssr
 # Operating system-specific files
 .DS_Store
 Thumbs.db
+
+# Env
 .env
+myvenv/
+venv/
