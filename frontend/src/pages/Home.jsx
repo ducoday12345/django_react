@@ -39,9 +39,10 @@ function Home() {
             .then((res) => {
                 if (res.status === 201) alert("Notes created!");
                 else alert("failed to create note.");
+                getNotes();
             })
             .catch((err) => alert(err));
-        getNotes();
+        
     };
 
     return (
