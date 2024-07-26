@@ -39,4 +39,4 @@ For any inquiries, please contact [Duc Minh Nguyen](mailto:ducoday12345@gmail.co
 - [React Documentation](https://legacy.reactjs.org/docs/getting-started.html)
 - [Vite.js Documentation](https://vitejs.dev/guide/)
 
-Thank you for checking out my project!
+Thank you for checking out my practice project (for no reason)!
